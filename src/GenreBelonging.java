@@ -6,7 +6,7 @@ public class GenreBelonging {
         this.book = book;
         this.genre = genre;
 
-        book.addGenre(genre);
+        //book.addGenre(genre);
         genre.addBook(book);
     }
 }

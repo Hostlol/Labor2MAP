@@ -13,7 +13,7 @@ public class Events {
 
     public void addBook(Book book) {
         books.add(book);
-        book.addEvents(this);
+        //book.addEvents(this);
     }
 
 
