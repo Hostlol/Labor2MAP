@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookRepository {
-    private List<Book> books = new ArrayList<>();
-    private int bookIdCounter = 1;
+    List<Book> books = new ArrayList<>();
+    int bookIdCounter = 1;
 
     public void addBook(Book book) {
         book.setBookId(bookIdCounter);
@@ -21,6 +21,6 @@ public class BookRepository {
     }
 
     public List<Book> getAllBooks() {
-        return new ArrayList<>(books);
+        return books;
     }
 }
