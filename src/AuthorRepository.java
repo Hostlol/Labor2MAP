@@ -23,5 +23,18 @@ public class AuthorRepository {
     public List<Author> getAllAuthors() {
         return new ArrayList<>(authors);
     }
+    public void removeAuthor(int authorId) {
+        Author authorToRemove = null;
+        for (Author author : authors) {
+            if (author.getAuthorId() == authorId) {
+                authorToRemove = author;
+                break;
+            }
+        }
+        if (authorToRemove != null) {
+            authors.remove(authorToRemove);
+        }
+
+    }
 }
 

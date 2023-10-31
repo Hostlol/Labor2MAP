@@ -8,9 +8,9 @@ public class BookController {
     }
 
     public void addBook(Book book) {
-        book.setBookId(this.bookRepository.bookIdCounter);
-        this.bookRepository.books.add(book);
-        this.bookRepository.bookIdCounter++;
+        book.setBookId(bookRepository.bookIdCounter);
+        bookRepository.books.add(book);
+        bookRepository.bookIdCounter++;
     }
 
     public Book findBookByTitle(String title) {

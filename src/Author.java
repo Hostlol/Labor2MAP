@@ -2,6 +2,10 @@ public class Author implements Person {
     private String name;
     private int AuthorId;
 
+    public int getAuthorId() {
+        return AuthorId;
+    }
+
     public Author(String name){
         this.name = name;
     }
