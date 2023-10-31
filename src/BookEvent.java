@@ -7,7 +7,7 @@ public class BookEvent {
         this.book = book;
         this.event = event;
 
-        book.addEvents(event);
+        //book.addEvents(event);
         event.addBook(book);
     }
 }

@@ -5,6 +5,8 @@ public class LibraryConsoleUI {
         Scanner scanner = new Scanner(System.in);
         AuthorRepository authorRepo = new AuthorRepository();
         BookRepository bookRepo = new BookRepository();
+        AuthorController authorController = new AuthorController(authorRepo);
+        BookController bookController = new BookController(bookRepo);
 
         while (true) {
             System.out.println("Library Management System");
@@ -21,7 +23,7 @@ public class LibraryConsoleUI {
                     System.out.print("Enter author's name: ");
                     String authorName = scanner.next();
                     Author author = new Author(authorName);
-                    authorRepo.addAuthor(author);
+                    authorController.addAuthor(author);
                     break;
 
                 case 2:
@@ -32,11 +34,11 @@ public class LibraryConsoleUI {
 
                     System.out.print("Enter author's name for the book: ");
                     authorName = scanner.next();
-                    Author author1 = authorRepo.findAuthorByName(authorName);
+                    Author author1 = authorController.findAuthorByName(authorName);
 
                     if (author1 != null) {
                         author1.writeBook(book);
-                        bookRepo.addBook(book);
+                        bookController.addBook(book);
                         System.out.println("Book added successfully.");
                     } else {
                         System.out.println("Author not found.");
@@ -46,11 +48,11 @@ public class LibraryConsoleUI {
                 case 3:
                     System.out.print("Enter author's name: ");
                     authorName = scanner.next();
-                    Author author2 = authorRepo.findAuthorByName(authorName);
+                    Author author2 = authorController.findAuthorByName(authorName);
 
                     if (author2 != null) {
                         System.out.println("Books by " + author2.getName() + ":");
-                        for (Book b : bookRepo.getAllBooks()) {
+                        for (Book b : bookController.getAllBooks()) {
                             if (b.getAuthors().contains(author2)) {
                                 System.out.println("- " + b.getTitle());
                             }
