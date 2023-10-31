@@ -57,6 +57,15 @@ public class PersistentConsoleUI {
                 case 1:
                     System.out.println("What is the name of the book?");
                     String book_name = scanner.nextLine();
+                    Book temp_book = new Book();
+                    temp_book.setTitle(book_name);
+                    System.out.println("Who is the Author?");
+                    String temp_name2 = scanner.nextLine();
+                    Author temp_author =new Author(temp_name2);
+                    authorRepo.addAuthor(temp_author);
+                    temp_book.addAuthor(temp_author);
+                    bookController.addBook(temp_book);
+
                     break;
                 case 2:
                     System.out.println("Which Book-id to remove?");
