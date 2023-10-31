@@ -56,7 +56,7 @@ public class PersistentConsoleUI {
             switch (option) {
                 case 1:
                     System.out.println("What is the name of the book?");
-                    // Add your program logic for option 1 here
+                    String book_name = scanner.nextLine();
                     break;
                 case 2:
                     System.out.println("Which Book-id to remove?");
@@ -72,6 +72,9 @@ public class PersistentConsoleUI {
                 case 4:
                     System.out.println("What is the name of the Author?");
                     // Add your program logic for option 1 here
+                    String temp_name = scanner.nextLine();
+                    authorRepo.addAuthor(new Author(temp_name));
+                    System.out.println("Author added");
                     break;
                 case 5:
                     System.out.println("Which Author-id to remove?");
@@ -97,8 +100,6 @@ public class PersistentConsoleUI {
                     System.out.println("Invalid option. Please select a valid option.");
             }
         }
-
-
         scanner.close();
     }
 }
