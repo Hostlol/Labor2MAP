@@ -21,7 +21,7 @@ public class AuthorRepository {
     }
 
     public List<Author> getAllAuthors() {
-        return new ArrayList<>(authors);
+        return authors;
     }
     public void removeAuthor(int authorId) {
         Author authorToRemove = null;

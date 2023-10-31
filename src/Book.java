@@ -32,6 +32,14 @@ public class Book {
     public List<Author> getAuthors() {
             return authors;
     }
+    public void printAuthors(){
+        for (Author author : authors){
+            System.out.println(author.getName());
+        }
+    }
+    public void removeAuthor(Author author) {
+        authors.remove(author);
+    }
 
 
 //    public void addGenre(Genre genre){

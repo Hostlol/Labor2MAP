@@ -1,4 +1,8 @@
 public class Author implements Person {
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;
     private int AuthorId;
 

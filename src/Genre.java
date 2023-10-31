@@ -12,7 +12,7 @@ public class Genre {
 
     public void addBook(Book book) {
         books.add(book);
-        book.addGenre(this);
+        //book.addGenre(this);
 
 
     }

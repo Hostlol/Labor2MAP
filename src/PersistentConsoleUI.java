@@ -10,8 +10,8 @@ public class PersistentConsoleUI {
         while (isRunning) {
             // Display menu options
             System.out.println("Select an option:");
-            System.out.println("1. Start the program");
-            System.out.println("2. About");
+            System.out.println("1. Add Book");
+            System.out.println("2. Tests");
             System.out.println("3. Quit");
 
             // Prompt the user to select an option
@@ -25,8 +25,8 @@ public class PersistentConsoleUI {
                     // Add your program logic for option 1 here
                     break;
                 case 2:
-                    System.out.println("This program is a simple Java application.");
-                    // Add information about the program for option 2
+                    TestBookAuthor.test_books();
+                    System.out.println("All Tests Completed");
                     break;
                 case 3:
                     System.out.println("Goodbye!");
