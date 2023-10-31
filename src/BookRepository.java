@@ -24,6 +24,12 @@ public class BookRepository {
         return books;
     }
 
+    public void printAllBooks() {
+        for (Book book : books){
+            System.out.println(book.toString());
+        }
+    }
+
     public void removeBook(int bookId) {
         Book bookToRemove = null;
         for (Book book : books) {

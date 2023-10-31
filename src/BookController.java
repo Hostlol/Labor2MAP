@@ -13,6 +13,9 @@ public class BookController {
         bookRepository.bookIdCounter++;
     }
 
+    public void printAllBooks() {
+        bookRepository.printAllBooks();
+    }
     public Book findBookByTitle(String title) {
         return bookRepository.findBookByTitle(title);
     }

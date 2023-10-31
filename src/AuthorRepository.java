@@ -23,6 +23,12 @@ public class AuthorRepository {
     public List<Author> getAllAuthors() {
         return authors;
     }
+
+    public void printAllAuthors() {
+        for (Author author : authors){
+            System.out.println(author.toString());
+        }
+    }
     public void removeAuthor(int authorId) {
         Author authorToRemove = null;
         for (Author author : authors) {

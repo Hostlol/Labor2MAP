@@ -4,6 +4,16 @@ import java.util.List;
 
 public class Book {
     private String title;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", authors=" + authors +
+                ", BookId=" + BookId +
+                '}';
+    }
+
     private List<Author> authors = new ArrayList<>();
 
     private int BookId;

@@ -18,6 +18,10 @@ public class AuthorController {
     public List<Author> getAllAuthors() {
         return authorRepository.getAllAuthors();
     }
+
+    public void printAllAuthors() {
+        authorRepository.printAllAuthors();
+    }
     public void removeAuthor(int authorId){
         authorRepository.removeAuthor(authorId);
     }
