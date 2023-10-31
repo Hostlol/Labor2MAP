@@ -26,6 +26,7 @@ public class PersistentConsoleUI {
                     break;
                 case 2:
                     TestBookAuthor.test_books();
+                    TestBookAuthor.test_authors();
                     System.out.println("All Tests Completed");
                     break;
                 case 3:

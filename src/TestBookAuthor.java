@@ -38,6 +38,33 @@ public class TestBookAuthor {
         System.out.println("Add New Author To Book Test Completed");
     }
     static void test_authors(){
+        Author author = new Author("John Doe");
+        assertEquals("John Doe", author.getName());
 
+        Book book = new Book();
+        author.writeBook(book);
+        assertEquals(1, book.getAuthors().size());
+        assertEquals(author, book.getAuthors().get(0));
+
+        author.setAuthorId(42);
+        assertEquals(42, author.getAuthorId());
+        AuthorRepository authorRepo = new AuthorRepository();
+        AuthorController authorController = new AuthorController(authorRepo);
+        Author author2 = new Author("Jane Smith");
+        authorController.addAuthor(author2);
+        assertEquals(1, authorController.getAllAuthors().size());
+
+        Author author3 = new Author("Alice Johnson");
+        authorController.addAuthor(author3);
+        Author foundAuthor = authorController.findAuthorByName("Alice Johnson");
+        assertNotNull(foundAuthor);
+        assertEquals("Alice Johnson", foundAuthor.getName());
+
+        Author author4 = new Author("Mary Brown");
+        authorController.addAuthor(author4);
+
+        int authorId = author4.getAuthorId();
+        authorController.removeAuthor(authorId);
+        assertNull(authorController.findAuthorByName("Mary Brown"));
     }
 }
