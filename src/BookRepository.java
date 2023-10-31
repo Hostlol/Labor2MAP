@@ -23,4 +23,17 @@ public class BookRepository {
     public List<Book> getAllBooks() {
         return books;
     }
+
+    public void removeBook(int bookId) {
+        Book bookToRemove = null;
+        for (Book book : books) {
+            if (book.getBookId() == bookId) {
+                bookToRemove = book;
+                break;
+            }
+        }
+        if (bookToRemove != null) {
+            books.remove(bookToRemove);
+        }
+    }
 }

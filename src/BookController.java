@@ -20,4 +20,8 @@ public class BookController {
     public List<Book> getAllBooks() {
         return bookRepository.getAllBooks();
     }
+
+    public void removeBook(int bookId){
+        bookRepository.removeBook(bookId);
+    }
 }

@@ -8,6 +8,10 @@ public class Book {
 
     private int BookId;
 
+    public int getBookId() {
+        return BookId;
+    }
+
     public void setBookId(int BookId){
         this.BookId = BookId;
     }
